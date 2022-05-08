@@ -5,17 +5,21 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
 
-    WebDriver driver;
+    protected WebDriver driver;
 
-    By txt_username = By.id("name");
-    By txt_password = By.id("password");
-    By btn_login = By.id("login");
-    By btn_logout = By.id("logout");
-    By txt_error_message = By.xpath("//div[text()='Password is invalid']");
+    private By txt_username = By.id("name");
+    private By txt_password = By.id("password");
+    private By btn_login = By.id("login");
+    private By btn_logout = By.id("logout");
+    private By txt_error_message = By.xpath("//div[text()='Password is invalid']");
 
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+
+        if(!driver.getTitle().equals("TestProject Demo")){
+            throw new IllegalStateException("This is not a Login Page. The current page is: " + driver.getCurrentUrl());
+        }
     }
 
     public void enterUserName(String username){
