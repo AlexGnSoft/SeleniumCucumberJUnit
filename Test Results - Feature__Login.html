@@ -2,7 +2,7 @@
 <html xmlns:str="http://exslt.org/strings" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Test Results &mdash; Feature: login</title>
+        <title>Test Results &mdash; Feature: Login</title>
         <style type="text/css">
           html {
             height: 100%
@@ -572,9 +572,9 @@ jQuery.cookie = function(name, value, options) {
     <body>
         <div id="container">
             <div id="header">
-                <div class="time" xmlns="">0 ms</div>
+                <div class="time" xmlns="">6.94 s</div>
                 <h1>
-                    Feature: login: <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">4 total, </span><span class="passed">4 passed</span></strong>
+                    Feature: Login: <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">20 total, </span><span class="passed">20 passed</span></strong>
                 </h1>
                 <div id="treecontrol">
                     <ul>
@@ -593,56 +593,185 @@ jQuery.cookie = function(name, value, options) {
                 <ul id="tree">
                     <li xmlns="" class="level top open">
                         <span><em class="time">
-                                <div class="time">0 ms</div>
+                                <div class="time">6.94 s</div>
                             </em>Cucumber</span>
                         <ul>
                             <li class="level suite open">
                                 <span><em class="time">
-                                        <div class="time">0 ms</div>
-                                    </em>feature to test login functionality</span>
+                                        <div class="time">6.94 s</div>
+                                    </em>Test login functionality</span>
                                 <ul>
                                     <li class="level suite open">
                                         <span><em class="time">
-                                                <div class="time">0 ms</div>
-                                            </em>Check login is successful with valid credentials</span>
+                                                <div class="time">3.85 s</div>
+                                            </em>Check log in successful with Valid credentials</span>
                                         <ul>
-                                            <li class="level test">
+                                            <li class="level suite open">
                                                 <span><em class="time">
-                                                        <div class="time">0 ms</div>
-                                                    </em><em class="status">passed</em>User is on login page</span>
+                                                        <div class="time">3.85 s</div>
+                                                    </em>Examples</span>
                                                 <ul>
-                                                    <li class="text">
-                                                        <span class="stdout">Inside Step - user is on login page<br/></span>
+                                                    <li class="level suite open">
+                                                        <span><em class="time">
+                                                                <div class="time">2.23 s</div>
+                                                            </em>Example #1</span>
+                                                        <ul>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">1.27 s</div>
+                                                                    </em><em class="status">passed</em>Browser is opened</span>
+                                                                <ul>
+                                                                    <li class="text">
+                                                                        <span class="stderr">SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".<br/>SLF4J: Defaulting to no-operation (NOP) logger implementation<br/>SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.<br/>Starting ChromeDriver 101.0.4951.15 (0dcf182bd3881ac6567fb51e86a17ba341d19475-refs/branch-heads/4951@{#217}) on port 62722<br/>Only local connections are allowed.<br/>Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.<br/>ChromeDriver was started successfully.<br/>May 08, 2022 6:02:28 PM org.openqa.selenium.remote.ProtocolHandshake createSession<br/>INFO: Detected dialect: W3C<br/>May 08, 2022 6:02:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch<br/>INFO: Found exact CDP implementation for version 101<br/></span>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">670 ms</div>
+                                                                    </em><em class="status">passed</em>User is on login page</span>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">78 ms</div>
+                                                                    </em><em class="status">passed</em>User enters Alex and 12345</span>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">21 ms</div>
+                                                                    </em><em class="status">passed</em>User clicks on Login button</span>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">184 ms</div>
+                                                                    </em><em class="status">passed</em>User is navigated to the home page</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="level suite open">
+                                                        <span><em class="time">
+                                                                <div class="time">1.63 s</div>
+                                                            </em>Example #2</span>
+                                                        <ul>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">860 ms</div>
+                                                                    </em><em class="status">passed</em>Browser is opened</span>
+                                                                <ul>
+                                                                    <li class="text">
+                                                                        <span class="stderr">Starting ChromeDriver 101.0.4951.15 (0dcf182bd3881ac6567fb51e86a17ba341d19475-refs/branch-heads/4951@{#217}) on port 62745<br/>Only local connections are allowed.<br/>Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.<br/>ChromeDriver was started successfully.<br/>May 08, 2022 6:02:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession<br/>INFO: Detected dialect: W3C<br/>May 08, 2022 6:02:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch<br/>INFO: Found exact CDP implementation for version 101<br/></span>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">497 ms</div>
+                                                                    </em><em class="status">passed</em>User is on login page</span>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">75 ms</div>
+                                                                    </em><em class="status">passed</em>User enters German and 54321</span>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">20 ms</div>
+                                                                    </em><em class="status">passed</em>User clicks on Login button</span>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">175 ms</div>
+                                                                    </em><em class="status">passed</em>User is navigated to the home page</span>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li class="level test">
+                                        </ul>
+                                    </li>
+                                    <li class="level suite open">
+                                        <span><em class="time">
+                                                <div class="time">3.08 s</div>
+                                            </em>Check log in unsuccessful with Invalid credentials</span>
+                                        <ul>
+                                            <li class="level suite open">
                                                 <span><em class="time">
-                                                        <div class="time">0 ms</div>
-                                                    </em><em class="status">passed</em>User enters username and password</span>
+                                                        <div class="time">3.08 s</div>
+                                                    </em>Examples</span>
                                                 <ul>
-                                                    <li class="text">
-                                                        <span class="stdout">User enters username and password<br/></span>
+                                                    <li class="level suite open">
+                                                        <span><em class="time">
+                                                                <div class="time">1.53 s</div>
+                                                            </em>Example #1</span>
+                                                        <ul>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">757 ms</div>
+                                                                    </em><em class="status">passed</em>Browser is opened</span>
+                                                                <ul>
+                                                                    <li class="text">
+                                                                        <span class="stderr">Starting ChromeDriver 101.0.4951.15 (0dcf182bd3881ac6567fb51e86a17ba341d19475-refs/branch-heads/4951@{#217}) on port 57070<br/>Only local connections are allowed.<br/>Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.<br/>ChromeDriver was started successfully.<br/>May 08, 2022 6:02:31 PM org.openqa.selenium.remote.ProtocolHandshake createSession<br/>INFO: Detected dialect: W3C<br/>May 08, 2022 6:02:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch<br/>INFO: Found exact CDP implementation for version 101<br/></span>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">503 ms</div>
+                                                                    </em><em class="status">passed</em>User is on login page</span>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">74 ms</div>
+                                                                    </em><em class="status">passed</em>User enters Alex and 1111</span>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">20 ms</div>
+                                                                    </em><em class="status">passed</em>User clicks on Login button</span>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">174 ms</div>
+                                                                    </em><em class="status">passed</em>User see a system error message</span>
+                                                            </li>
+                                                        </ul>
                                                     </li>
-                                                </ul>
-                                            </li>
-                                            <li class="level test">
-                                                <span><em class="time">
-                                                        <div class="time">0 ms</div>
-                                                    </em><em class="status">passed</em>User clicks on login button</span>
-                                                <ul>
-                                                    <li class="text">
-                                                        <span class="stdout">Inside step - clicks on login button<br/></span>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="level test">
-                                                <span><em class="time">
-                                                        <div class="time">0 ms</div>
-                                                    </em><em class="status">passed</em>User is navigated to the home page</span>
-                                                <ul>
-                                                    <li class="text">
-                                                        <span class="stdout">User is navigated to home page<br/></span>
+                                                    <li class="level suite open">
+                                                        <span><em class="time">
+                                                                <div class="time">1.55 s</div>
+                                                            </em>Example #2</span>
+                                                        <ul>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">799 ms</div>
+                                                                    </em><em class="status">passed</em>Browser is opened</span>
+                                                                <ul>
+                                                                    <li class="text">
+                                                                        <span class="stderr">Starting ChromeDriver 101.0.4951.15 (0dcf182bd3881ac6567fb51e86a17ba341d19475-refs/branch-heads/4951@{#217}) on port 53641<br/>Only local connections are allowed.<br/>Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.<br/>ChromeDriver was started successfully.<br/>May 08, 2022 6:02:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession<br/>INFO: Detected dialect: W3C<br/>May 08, 2022 6:02:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch<br/>INFO: Found exact CDP implementation for version 101<br/></span>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">483 ms</div>
+                                                                    </em><em class="status">passed</em>User is on login page</span>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">73 ms</div>
+                                                                    </em><em class="status">passed</em>User enters German and 000</span>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">20 ms</div>
+                                                                    </em><em class="status">passed</em>User clicks on Login button</span>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">178 ms</div>
+                                                                    </em><em class="status">passed</em>User see a system error message</span>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -656,7 +785,7 @@ jQuery.cookie = function(name, value, options) {
             </div>
         </div>
         <div id="footer">
-            <p>Generated by IntelliJ IDEA on 5/8/22, 2:11 PM</p>
+            <p>Generated by IntelliJ IDEA on 5/8/22, 6:02 PM</p>
         </div>
     </body>
 </html>

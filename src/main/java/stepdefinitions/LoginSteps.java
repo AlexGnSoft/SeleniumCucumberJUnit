@@ -1,9 +1,9 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.*;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.LoginPage;
 import java.time.Duration;
 import static constants.Constants.TimeoutVariables.IMPLICITY_WAIT;
 import static constants.Constants.TimeoutVariables.PAGE_LOAD_WAIT;
@@ -12,6 +12,7 @@ import static constants.Constants.Urls.TEST_PROJECT_WEB_SITE;
 public class LoginSteps {
 
     WebDriver driver = null;
+    LoginPage loginPage;
 
     @Given("Browser is opened")
     public void browser_is_opened() {
@@ -31,18 +32,26 @@ public class LoginSteps {
 
     @When("^User enters (.*) and (.*)$")
     public void user_enters_username_and_password(String username, String  password) {
-        driver.findElement(By.id("name")).sendKeys(username);
-        driver.findElement(By.id("password")).sendKeys(password);
-
+        loginPage = new LoginPage(driver);
+        loginPage.enterUserName(username);
+        loginPage.enterPassword(password);
     }
     @And("User clicks on Login button")
     public void user_clicks_on_Login_button() {
-        driver.findElement(By.id("login")).click();
+        loginPage.clickLogIn();
     }
 
     @Then("User is navigated to the home page")
     public void user_is_navigated_to_the_home_page() {
-        driver.findElement(By.id("logout")).isDisplayed();
+        loginPage.checkLogOutIsDisplayed();
+
+        driver.close();
+        driver.quit();
+    }
+
+    @Then("User see a system error message")
+    public void user_see_a_system_error_message() {
+        loginPage.checkErrorMessageIsDisplayed();
 
         driver.close();
         driver.quit();
