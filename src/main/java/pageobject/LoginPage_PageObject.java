@@ -1,9 +1,9 @@
-package pages;
+package pageobject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class LoginPage_PageObject {
 
     protected WebDriver driver;
 
@@ -14,7 +14,7 @@ public class LoginPage {
     private By txt_error_message = By.xpath("//div[text()='Password is invalid']");
 
 
-    public LoginPage(WebDriver driver) {
+    public LoginPage_PageObject(WebDriver driver) {
         this.driver = driver;
 
         if(!driver.getTitle().equals("TestProject Demo")){
@@ -42,10 +42,10 @@ public class LoginPage {
         driver.findElement(txt_error_message).isDisplayed();
     }
 
-//    public void loginValidUser(String username, String password){
-//        driver.findElement(txt_username).sendKeys(username);
-//        driver.findElement(txt_password).sendKeys(password);
-//        driver.findElement(btn_login).click();
-//
-//    }
+    public void loginValidUser(String username, String password){
+        driver.findElement(txt_username).sendKeys(username);
+        driver.findElement(txt_password).sendKeys(password);
+        driver.findElement(btn_login).click();
+
+    }
 }

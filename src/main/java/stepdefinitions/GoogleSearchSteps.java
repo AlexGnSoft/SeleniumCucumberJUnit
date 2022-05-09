@@ -28,6 +28,7 @@ public class GoogleSearchSteps {
 //        driver.manage().window().maximize();
 //
 //    }
+
     @And("User is on google search page")
     public void user_is_on_google_search_page() {
         driver.navigate().to(GOOGLE_WEB_SITE);

@@ -11,7 +11,7 @@ Feature: Test login functionality
    Examples:
      | username | password |
      | Alex     | 12345    |
-     | German   | 54321    |
+     |German    | 67890    |
 
   Scenario Outline: Check log in unsuccessful with Invalid credentials
 
