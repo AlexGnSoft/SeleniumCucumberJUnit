@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SeleniumCucumberJUnit(BasicSetUp)" />
+        <module name="SeleniumCucumberJUnit(BasicSetUp)_PO_PF" />
       </profile>
     </annotationProcessing>
   </component>
