@@ -1,5 +1,7 @@
 package stepdefinitions;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -21,18 +23,21 @@ public class LoginSteps_PageFactory {
     LoginPage_PageFactory loginPagePF;
     HomePage_PageFactory homePage;
 
+    @Before
     @Given("Browser is opened")
     public void browser_is_opened() {
-
-        System.out.println("====Page Factory 'LoginSteps_PageFactory 'is running=====");
-
         String projectPath = System.getProperty("user.dir");
         System.setProperty("webdriver.chrome.driver", projectPath + "/src/main/resources/drivers/chromedriver");
         driver = new ChromeDriver();
-
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITY_WAIT));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(PAGE_LOAD_WAIT));
         driver.manage().window().maximize();
+    }
+
+    @After
+    public void tearDown(){
+        driver.close();
+        driver.quit();
     }
 
     @And("User is on login page")
@@ -60,16 +65,10 @@ public class LoginSteps_PageFactory {
     public void user_is_navigated_to_the_home_page() {
         homePage = new HomePage_PageFactory(driver);
         homePage.checkLogOutIsDisplayed();
-
-        driver.close();
-        driver.quit();
     }
 
     @Then("User see a system error message")
     public void user_see_a_system_error_message() {
         loginPagePF.checkErrorMessageIsDisplayed();
-
-        driver.close();
-        driver.quit();
     }
 }
